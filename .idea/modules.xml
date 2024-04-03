@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MultiRubro.iml" filepath="$PROJECT_DIR$/.idea/MultiRubro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MutliRubroProyect/MutliRubroProyect.iml" filepath="$PROJECT_DIR$/MutliRubroProyect/MutliRubroProyect.iml" />
     </modules>
   </component>
 </project>
