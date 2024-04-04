@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Selling {
+public class SellingEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Selling {
 
     @ManyToOne
     @JoinColumn(name = "bill_id")
-    private Bill bill;
+    private BillEntity bill;
 
     @Column
     private int quantity;

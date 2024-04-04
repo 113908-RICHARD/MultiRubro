@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bill {
+public class BillEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,8 +23,8 @@ public class Bill {
 
     @ManyToOne
     @JoinColumn(name = "client_id")
-    private Client client;
+    private ClientEntity client;
 
     @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL)
-    private List<Selling> sellingList;
+    private List<SellingEntity> sellingList;
 }

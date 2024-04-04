@@ -1,33 +1,25 @@
 package com.example.mutlirubroproyect.entities;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "clients")
+@Table(name = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Client {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long user_id;
 
     @Column
-    private String name;
+    private String userName;
 
     @Column
-    private String address;
-
-    @Column
-    private String cellphone;
-
-
-
-
+    private String password;
 
 }
