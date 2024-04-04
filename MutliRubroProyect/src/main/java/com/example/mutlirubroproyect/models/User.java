@@ -7,12 +7,9 @@ import lombok.*;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Client {
+public class User {
 
-    Long clientId;
-    String name;
-    String address;
-    String cellphone;
-
-    User user;
+    Long userId;
+    String userName;
+    String password;
 }
