@@ -1,6 +1,6 @@
-package com.example.mutlirubroproyect.repositories.jpa;
+package com.example.MultiRubro.repositories.jpa;
 
-import com.example.mutlirubroproyect.entities.BillEntity;
+import com.example.MultiRubro.entities.BillEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.example.mutlirubroproyect.models;
+package com.example.MultiRubro.models;
 
 import lombok.*;
 

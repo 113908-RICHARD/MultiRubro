@@ -1,4 +1,4 @@
-package com.example.mutlirubroproyect.entities;
+package com.example.MultiRubro.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,20 +6,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "users")
+@Table(name = "sellings")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserEntity {
+public class SellingEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_id;
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "bill_id")
+    private BillEntity bill;
 
     @Column
-    private String userName;
-
-    @Column
-    private String password;
-
+    private int quantity;
 }

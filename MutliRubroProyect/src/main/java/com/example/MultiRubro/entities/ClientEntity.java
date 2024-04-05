@@ -1,4 +1,4 @@
-package com.example.mutlirubroproyect.entities;
+package com.example.MultiRubro.entities;
 
 
 import jakarta.persistence.*;

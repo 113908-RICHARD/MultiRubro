@@ -1,4 +1,4 @@
-package com.example.mutlirubroproyect.configs;
+package com.example.MultiRubro.configs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

@@ -1,4 +1,4 @@
-package com.example.mutlirubroproyect.configs;
+package com.example.MultiRubro.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
