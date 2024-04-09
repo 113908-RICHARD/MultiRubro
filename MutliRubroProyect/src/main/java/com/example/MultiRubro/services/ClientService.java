@@ -12,5 +12,7 @@ public interface ClientService {
     Client updateClient(Client client);
     Client getClient(Long id);
     List<Client> getClientsByNameOrAll(String name);
+    Client getClientByUser(String userName);
+
     Client deleteClient(Long id);
 }
