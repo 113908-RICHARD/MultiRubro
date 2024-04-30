@@ -1,15 +1,19 @@
 package com.example.MultiRubro.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "bills")
 @Data
+@Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class BillEntity {
@@ -25,6 +29,9 @@ public class BillEntity {
     @JoinColumn(name = "client_id")
     private ClientEntity client;
 
-    @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "billId", cascade = CascadeType.PERSIST)
     private List<SellingEntity> sellingList;
+
+
+
 }

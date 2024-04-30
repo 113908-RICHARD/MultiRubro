@@ -1,5 +1,6 @@
 package com.example.MultiRubro.services;
 
+import com.example.MultiRubro.Requests.LoginRequest;
 import com.example.MultiRubro.models.User;
 import org.springframework.stereotype.Service;
 
@@ -8,4 +9,7 @@ public interface UserService {
 
     User createUser(User user);
     User updateUser(User user);
+
+    User loginService(LoginRequest user);
+
 }

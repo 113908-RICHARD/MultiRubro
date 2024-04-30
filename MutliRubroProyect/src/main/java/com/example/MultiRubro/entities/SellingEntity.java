@@ -1,13 +1,18 @@
 package com.example.MultiRubro.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "sellings")
 @Data
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class SellingEntity {
@@ -16,10 +21,11 @@ public class SellingEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "bill_id")
-    private BillEntity bill;
+    @Column(name = "bill_id")
+    private Long billId;
 
+    @Column
+    private int productId;
     @Column
     private int quantity;
 }

@@ -3,12 +3,14 @@ package com.example.MultiRubro.controllers;
 
 import com.example.MultiRubro.models.Client;
 import com.example.MultiRubro.services.ClientService;
+import com.example.MultiRubro.services.rabbitMQ.messageManager;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
 @RequestMapping("/clients")
@@ -17,6 +19,9 @@ public class ClientController {
 
     @Autowired
     private ClientService clientService;
+
+    @Autowired
+    private messageManager messageManager;
 
     @GetMapping("")
     public ResponseEntity<List<Client>>getClients(
@@ -30,6 +35,11 @@ public class ClientController {
 
 
     }
+
+    @GetMapping("/sendMessage")
+    public void sendMessage(){
+        String message = "Message # "+ ThreadLocalRandom.current().nextInt();
+        this.messageManager.sendMessage(message);    }
 
     @PostMapping("")
     private ResponseEntity<Client> postClient(@RequestBody Client client){
