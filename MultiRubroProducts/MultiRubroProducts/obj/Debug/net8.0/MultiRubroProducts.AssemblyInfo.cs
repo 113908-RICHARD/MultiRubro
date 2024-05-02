@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MultiRubroProducts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c00cf1b4e134db4ed690180f65b29bf19a7e0276")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8ae9907d1865147e3abee51424dc73d33a5bd6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MultiRubroProducts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MultiRubroProducts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
