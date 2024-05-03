@@ -25,9 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="CQRS\Handlers\Commands\Category\" />
+    <Folder Include="CQRS\Handlers\Commands\Provider\" />
+    <Folder Include="CQRS\Handlers\Commands\Product\" />
+    <Folder Include="CQRS\Handlers\Queries\Provider\" />
     <Folder Include="Migrations\" />
-    <Folder Include="CommandsHandlers\" />
-    <Folder Include="CommandsHandlers\Handlers\" />
   </ItemGroup>
 
 </Project>
