@@ -1,0 +1,864 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\handlers\\queries\\product\\getallproductsbyproviderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\handlers\\queries\\product\\getallproductsbyproviderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\handlers\\queries\\category\\getallcategoriesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\handlers\\queries\\category\\getallcategoriesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\handlers\\queries\\category\\getcategorybyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\handlers\\queries\\category\\getcategorybyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\queries\\category\\getallcategoriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\queries\\category\\getallcategoriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\queries\\category\\getcategorybyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\queries\\category\\getcategorybyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\queries\\product\\getproductbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\queries\\product\\getproductbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\queries\\product\\getallproductsfromproviderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\queries\\product\\getallproductsfromproviderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\product\\deleteproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\product\\deleteproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\product\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\product\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\product\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\product\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\provider\\deleteprovidercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\provider\\deleteprovidercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\provider\\updateprovidercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\provider\\updateprovidercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\provider\\createprovidercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\provider\\createprovidercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\queries\\provider\\getallprovidersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\queries\\provider\\getallprovidersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\queries\\provider\\getproviderbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\queries\\provider\\getproviderbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\category\\deletecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\category\\deletecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\category\\updatecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\category\\updatecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\cqrs\\commands\\category\\createcategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\cqrs\\commands\\category\\createcategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\creation\\createproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\creation\\createproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\profiles\\requesttodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\profiles\\requesttodomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dbset\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dbset\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\profiles\\domaintoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\profiles\\domaintoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\responses\\providerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\responses\\providerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dbset\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dbset\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\responses\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\responses\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dbset\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dbset\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dbset\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dbset\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\responses\\updatestockresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\responses\\updatestockresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\creation\\createcategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\creation\\createcategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\persistence\\appdbcontextfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\persistence\\appdbcontextfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\updating\\updateproductstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\updating\\updateproductstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\updating\\updateproviderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\updating\\updateproviderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\updating\\updateproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\updating\\updateproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\responses\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\responses\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\updating\\updatecategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\updating\\updatecategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\deletion\\deleteproviderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\deletion\\deleteproviderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\creation\\createproviderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\creation\\createproviderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\deletion\\deleteproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\deletion\\deleteproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\dtos\\requests\\deletion\\deletecategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\dtos\\requests\\deletion\\deletecategoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\providerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\providerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|c:\\users\\genaro\\documents\\github\\multirubro\\multirubroproducts\\multirubroproducts\\repositories\\interfaces\\iproviderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{297A8DC8-8C7A-47A4-BE9C-2C47468E8051}|MultiRubroProducts\\MultiRubroProducts.csproj|solutionrelative:multirubroproducts\\repositories\\interfaces\\iproviderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetAllProductsByProviderQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Handlers\\Queries\\Product\\GetAllProductsByProviderQueryHandler.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Handlers\\Queries\\Product\\GetAllProductsByProviderQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Handlers\\Queries\\Product\\GetAllProductsByProviderQueryHandler.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Handlers\\Queries\\Product\\GetAllProductsByProviderQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T19:04:51.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetAllCategoriesQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Handlers\\Queries\\Category\\GetAllCategoriesQueryHandler.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Handlers\\Queries\\Category\\GetAllCategoriesQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Handlers\\Queries\\Category\\GetAllCategoriesQueryHandler.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Handlers\\Queries\\Category\\GetAllCategoriesQueryHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:22:12.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetAllCategoriesQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Category\\GetAllCategoriesQuery.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Queries\\Category\\GetAllCategoriesQuery.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Category\\GetAllCategoriesQuery.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Queries\\Category\\GetAllCategoriesQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:17:54.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetCategoryByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Category\\GetCategoryByIdQuery.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Queries\\Category\\GetCategoryByIdQuery.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Category\\GetCategoryByIdQuery.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Queries\\Category\\GetCategoryByIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:17:09.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetCategoryByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Handlers\\Queries\\Category\\GetCategoryByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Handlers\\Queries\\Category\\GetCategoryByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Handlers\\Queries\\Category\\GetCategoryByIdQueryHandler.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Handlers\\Queries\\Category\\GetCategoryByIdQueryHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:10:52.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetProductByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Product\\GetProductByIdQuery.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Queries\\Product\\GetProductByIdQuery.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Product\\GetProductByIdQuery.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Queries\\Product\\GetProductByIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:00:13.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetAllProductsFromProviderQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Product\\GetAllProductsFromProviderQuery.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Queries\\Product\\GetAllProductsFromProviderQuery.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Product\\GetAllProductsFromProviderQuery.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Queries\\Product\\GetAllProductsFromProviderQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:02:30.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DeleteProductCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Product\\DeleteProductCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Product\\DeleteProductCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Product\\DeleteProductCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Product\\DeleteProductCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:05:03.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateProductCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Product\\UpdateProductCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Product\\UpdateProductCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Product\\UpdateProductCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Product\\UpdateProductCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:04:16.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateProductCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Product\\CreateProductCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Product\\CreateProductCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Product\\CreateProductCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Product\\CreateProductCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:03:30.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DeleteProviderCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Provider\\DeleteProviderCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Provider\\DeleteProviderCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Provider\\DeleteProviderCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Provider\\DeleteProviderCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:58:27.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateProviderCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Provider\\UpdateProviderCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Provider\\UpdateProviderCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Provider\\UpdateProviderCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Provider\\UpdateProviderCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:57:48.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateProviderCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Provider\\CreateProviderCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Provider\\CreateProviderCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Provider\\CreateProviderCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Provider\\CreateProviderCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:56:50.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetAllProvidersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Provider\\GetAllProvidersQuery.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Queries\\Provider\\GetAllProvidersQuery.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Provider\\GetAllProvidersQuery.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Queries\\Provider\\GetAllProvidersQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:55:59.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetProviderByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Provider\\GetProviderByIdQuery.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Queries\\Provider\\GetProviderByIdQuery.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Queries\\Provider\\GetProviderByIdQuery.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Queries\\Provider\\GetProviderByIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:54:19.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DeleteCategoryCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Category\\DeleteCategoryCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Category\\DeleteCategoryCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Category\\DeleteCategoryCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Category\\DeleteCategoryCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:47:39.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UpdateCategoryCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Category\\UpdateCategoryCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Category\\UpdateCategoryCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Category\\UpdateCategoryCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Category\\UpdateCategoryCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:46:37.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateCategoryCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Category\\CreateCategoryCommand.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\CQRS\\Commands\\Category\\CreateCategoryCommand.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\CQRS\\Commands\\Category\\CreateCategoryCommand.cs",
+              "RelativeToolTip": "MultiRubroProducts\\CQRS\\Commands\\Category\\CreateCategoryCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T21:42:53.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Provider.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DbSet\\Provider.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DbSet\\Provider.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DbSet\\Provider.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DbSet\\Provider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T17:39:22.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAFIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:44:44.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DomainToResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Profiles\\DomainToResponse.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Profiles\\DomainToResponse.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Profiles\\DomainToResponse.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Profiles\\DomainToResponse.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T23:15:28.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProviderResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Responses\\ProviderResponse.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Responses\\ProviderResponse.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Responses\\ProviderResponse.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Responses\\ProviderResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:44:23.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DbSet\\Product.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DbSet\\Product.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DbSet\\Product.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DbSet\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T17:39:05.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RequestToDomain.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Profiles\\RequestToDomain.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Profiles\\RequestToDomain.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Profiles\\RequestToDomain.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Profiles\\RequestToDomain.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T23:15:39.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateProductRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateProductRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateProductRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateProductRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateProductRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:38:40.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Responses\\ProductResponse.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Responses\\ProductResponse.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Responses\\ProductResponse.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Responses\\ProductResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:44:39.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DbSet\\Category.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DbSet\\Category.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DbSet\\Category.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DbSet\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T17:39:34.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DbSet\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DbSet\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DbSet\\BaseEntity.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DbSet\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T20:41:31.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UpdateStockResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Responses\\UpdateStockResponse.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Responses\\UpdateStockResponse.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Responses\\UpdateStockResponse.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Responses\\UpdateStockResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T16:12:21.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Program.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Program.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Program.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T22:16:53.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UpdateProductStock.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProductStock.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProductStock.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProductStock.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProductStock.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T16:06:05.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CreateCategoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateCategoryRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateCategoryRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateCategoryRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateCategoryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:38:37.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UpdateProviderRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProviderRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProviderRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProviderRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProviderRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:42:10.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AppDbContextFile.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Persistence\\AppDbContextFile.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Persistence\\AppDbContextFile.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Persistence\\AppDbContextFile.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Persistence\\AppDbContextFile.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T22:18:11.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UpdateProductRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProductRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProductRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProductRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateProductRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:42:23.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CategoryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Responses\\CategoryResponse.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Responses\\CategoryResponse.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Responses\\CategoryResponse.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Responses\\CategoryResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:44:49.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UpdateCategoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateCategoryRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateCategoryRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateCategoryRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Updating\\UpdateCategoryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:41:57.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DeleteProviderRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteProviderRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteProviderRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteProviderRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteProviderRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:41:26.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CreateProviderRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateProviderRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateProviderRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateProviderRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Creation\\CreateProviderRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:38:44.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DeleteProductRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteProductRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteProductRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteProductRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteProductRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:41:45.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DeleteCategoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteCategoryRequest.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteCategoryRequest.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteCategoryRequest.cs",
+              "RelativeToolTip": "MultiRubroProducts\\DTOS\\Requests\\Deletion\\DeleteCategoryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T15:41:16.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\appsettings.json",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\appsettings.json",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\appsettings.json",
+              "RelativeToolTip": "MultiRubroProducts\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-01T15:29:06.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:44:30.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\GenericRepository.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:49:00.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ProviderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\ProviderRepository.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\ProviderRepository.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\ProviderRepository.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\ProviderRepository.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAACYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:47:22.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:49:27.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:40:04.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:35:14.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:39:32.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:41:36.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "IProviderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\IProviderRepository.cs",
+              "RelativeDocumentMoniker": "MultiRubroProducts\\Repositories\\Interfaces\\IProviderRepository.cs",
+              "ToolTip": "C:\\Users\\Genaro\\Documents\\GitHub\\MultiRubro\\MultiRubroProducts\\MultiRubroProducts\\Repositories\\Interfaces\\IProviderRepository.cs",
+              "RelativeToolTip": "MultiRubroProducts\\Repositories\\Interfaces\\IProviderRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T21:37:05.019Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
