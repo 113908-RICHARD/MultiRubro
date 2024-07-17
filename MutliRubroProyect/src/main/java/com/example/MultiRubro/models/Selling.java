@@ -2,6 +2,8 @@ package com.example.MultiRubro.models;
 
 import lombok.*;
 
+import java.util.UUID;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,6 +13,6 @@ public class Selling {
     Long sellingId;
     Bill bill;
 
-    Long productId;
+    UUID productId;
     Integer productQuantity;
 }

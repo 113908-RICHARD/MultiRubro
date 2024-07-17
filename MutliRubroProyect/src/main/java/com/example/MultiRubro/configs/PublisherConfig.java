@@ -11,10 +11,8 @@ import org.springframework.amqp.core.Queue;
 @Configuration
 public class PublisherConfig {
 
-
-
     @Bean
     public Queue queue() {
-        return new Queue("cola1");
+        return new Queue("UpdateStockQueue");
     }
 }

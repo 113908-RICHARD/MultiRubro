@@ -2,6 +2,8 @@ package com.example.MultiRubro.Requests;
 
 import lombok.*;
 
+import java.util.UUID;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -10,7 +12,7 @@ import lombok.*;
 public class SellingRequest {
 
     Long billId ;
-    Integer productNumber;
+    UUID productNumber;
     Integer quantity;
 
 }

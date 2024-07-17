@@ -15,8 +15,6 @@ import java.io.DataInput;
 
 
 @Component
-
-
 public class Consumer {
 
     @Autowired

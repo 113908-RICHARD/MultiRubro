@@ -7,14 +7,19 @@ import com.example.MultiRubro.Responses.SellingResponse;
 import com.example.MultiRubro.entities.BillEntity;
 import com.example.MultiRubro.entities.ClientEntity;
 import com.example.MultiRubro.entities.SellingEntity;
+import com.example.MultiRubro.feignClients.ProductsFeignClient;
+import com.example.MultiRubro.feignClients.feignModels.GenericResponse;
+import com.example.MultiRubro.feignClients.feignModels.UpdateProductStockRequest;
 import com.example.MultiRubro.models.Bill;
 import com.example.MultiRubro.models.Client;
 import com.example.MultiRubro.models.Selling;
+import com.example.MultiRubro.publisherRabbitMQ.Publisher;
 import com.example.MultiRubro.repositories.jpa.BillJpaRepository;
 import com.example.MultiRubro.repositories.jpa.SellingEntityJpaRepository;
 import com.example.MultiRubro.services.BillService;
 import com.example.MultiRubro.services.ClientService;
 import com.example.MultiRubro.services.SellingService;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +49,13 @@ public class BillServiceImp implements BillService {
 
     @Autowired
     private SellingService sellingService;
+
+    @Autowired
+    private ProductsFeignClient feignClient;
+
+    @Autowired
+    Publisher publisher;
+
     @Override
     public BillResponse getBillById(Long id) {
         Optional<BillEntity> getById = billJpaRepository.getBillEntityById(id);
@@ -130,6 +142,15 @@ public class BillServiceImp implements BillService {
                 SellingEntity sellingEntity = new SellingEntity();
                 sellingEntity.setBillId(billToSave.getId());
 
+                if(!checkProductStock(sell.getProductNumber(),sell.getQuantity())){
+                    throw new RuntimeException("there is not enough stock of the product "+sell.getProductNumber());
+                }
+                UpdateProductStockRequest updateProductStockRequest = UpdateProductStockRequest.builder()
+                                .id(sell.getProductNumber())
+                                        .stock(sell.getQuantity())
+                                                .subtract(true).build();
+                publisher.sendMessage(updateProductStockRequest);
+
                 sellingEntity.setQuantity(sell.getQuantity());
                 sellingEntity.setProductId(sell.getProductNumber());
                 sellingEntity = sellingService.createSelling(sellingEntity);
@@ -145,11 +166,21 @@ public class BillServiceImp implements BillService {
 
             // Return the response
             return response;
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             // Roll back the transaction in case of error
-            throw new RuntimeException("Failed to create bill", e);
+            throw new RuntimeException(e.getMessage(), e);
         }
     }
+
+    private Boolean checkProductStock(UUID productId, Integer quantity){
+        GenericResponse<Integer> response = feignClient.getProductStockById(productId);
+        if (!response.getStatus().equals(HttpStatus.OK)){
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,response.getMessage(),null);
+        }
+        return response.getData() - quantity >= 0;
+    }
+
+
 
 
 

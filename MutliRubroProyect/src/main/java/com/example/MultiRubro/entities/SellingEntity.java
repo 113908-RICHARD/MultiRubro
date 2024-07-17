@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @Entity
 @Table(name = "sellings")
 @Data
@@ -25,7 +27,7 @@ public class SellingEntity {
     private Long billId;
 
     @Column
-    private int productId;
+    private UUID productId;
     @Column
     private int quantity;
 }
