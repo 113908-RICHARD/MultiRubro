@@ -105,9 +105,11 @@ public class ProductService implements IProductService {
         if (productEntityOptional.isPresent()) {
             try{
                 ProductEntity product = productEntityOptional.get();
-                if (request.getSubtract())
+                if (request.getSubtract()) {
+                    product.setStock(product.getStock() - request.getStock());
+                }else {
                     product.setStock(product.getStock() + request.getStock());
-                product.setStock(product.getStock() - request.getStock());
+                }
 
                 productRepository.save(product);
 

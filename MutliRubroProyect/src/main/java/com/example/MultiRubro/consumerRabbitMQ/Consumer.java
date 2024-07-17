@@ -20,7 +20,7 @@ public class Consumer {
     @Autowired
     private ObjectMapper objectMapper;
     private static final Logger logger = LoggerFactory.getLogger(Consumer.class);
-    @RabbitListener(queues = {"cola1"})
+    @RabbitListener(queues = {"UpdateStockQueue"})
     public void recieveMessage(@Payload String message){
         try {
             Client client = objectMapper.readValue(message, Client.class);
