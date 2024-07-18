@@ -1,0 +1,10 @@
+server:
+  port: 8083
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/113908-RICHARD/MultiRubro
+          default-label: main
+          search-paths: config-data
