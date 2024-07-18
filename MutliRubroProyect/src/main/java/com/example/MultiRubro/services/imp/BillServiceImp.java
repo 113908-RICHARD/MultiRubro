@@ -117,52 +117,19 @@ public class BillServiceImp implements BillService {
     @Override
     public BillResponse createBill(CreateBillRequest request) {
         try {
-            // Create a new bill entity
-            BillEntity billToSave = new BillEntity();
+
             Date currentDate = Calendar.getInstance().getTime();
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             // Format the current date to a string
             String formattedDate = dateFormat.format(currentDate);
-            billToSave.setDate(currentDate);
-            Client client = clientService.getClient(request.getClientId());
-            billToSave.setClient(modelMapper.map(client, ClientEntity.class));
+            // Create a new bill entity
+            BillEntity savedBill = saveBillEntity(request.getClientId(),currentDate);
 
-            // Save the bill entity to obtain its ID
-            billToSave = billJpaRepository.save(billToSave);
 
-            // Create and populate the response
             BillResponse response = new BillResponse();
-            List<SellingResponse> sellingResponseList = new ArrayList<>();
-            response.setSellingList(sellingResponseList);
+            response.setSellingList(getSellingResponseList(request.getSellingList(),savedBill.getId()));
             response.setBillingDate(formattedDate);
-            response.setClientName(client.getName());
-
-            // Create and save the sellings
-            for (SellingRequest sell : request.getSellingList()) {
-                SellingEntity sellingEntity = new SellingEntity();
-                sellingEntity.setBillId(billToSave.getId());
-
-                if(!checkProductStock(sell.getProductNumber(),sell.getQuantity())){
-                    throw new RuntimeException("there is not enough stock of the product "+sell.getProductNumber());
-                }
-                UpdateProductStockRequest updateProductStockRequest = UpdateProductStockRequest.builder()
-                                .id(sell.getProductNumber())
-                                        .stock(sell.getQuantity())
-                                                .subtract(true).build();
-                publisher.sendMessage(updateProductStockRequest);
-
-                sellingEntity.setQuantity(sell.getQuantity());
-                sellingEntity.setProductId(sell.getProductNumber());
-                sellingEntity = sellingService.createSelling(sellingEntity);
-
-                // Create and populate the selling response
-                SellingResponse sellingResponse = new SellingResponse();
-                sellingResponse.setProductNumber(sellingEntity.getProductId());
-                sellingResponse.setQuantity(sellingEntity.getQuantity());
-                sellingResponse.setBillId(billToSave.getId());
-                sellingResponseList.add(sellingResponse);
-
-            }
+            response.setClientName(clientService.getClient(request.getClientId()).getName());
 
             // Return the response
             return response;
@@ -170,6 +137,48 @@ public class BillServiceImp implements BillService {
             // Roll back the transaction in case of error
             throw new RuntimeException(e.getMessage(), e);
         }
+    }
+
+    private List<SellingResponse> getSellingResponseList( List<SellingRequest> sellingList, Long savedBill){
+        List<SellingResponse> sellingResponseList = new ArrayList<>();
+        // Create and save the sellings
+        for (SellingRequest sell : sellingList) {
+            SellingEntity sellingEntity = new SellingEntity();
+            sellingEntity.setBillId(savedBill);
+
+            if(!checkProductStock(sell.getProductNumber(),sell.getQuantity())){
+                throw new RuntimeException("there is not enough stock of the product "+sell.getProductNumber());
+            }
+            UpdateProductStockRequest updateProductStockRequest = UpdateProductStockRequest.builder()
+                    .id(sell.getProductNumber())
+                    .stock(sell.getQuantity())
+                    .subtract(true).build();
+            publisher.sendMessage(updateProductStockRequest);
+
+            sellingEntity.setQuantity(sell.getQuantity());
+            sellingEntity.setProductId(sell.getProductNumber());
+            sellingEntity = sellingService.createSelling(sellingEntity);
+
+            // Create and populate the selling response
+            SellingResponse sellingResponse = new SellingResponse();
+            sellingResponse.setProductNumber(sellingEntity.getProductId());
+            sellingResponse.setQuantity(sellingEntity.getQuantity());
+            sellingResponse.setBillId(savedBill);
+            sellingResponseList.add(sellingResponse);
+
+        }
+        return sellingResponseList;
+    }
+
+    private BillEntity saveBillEntity(Long clientId,Date currentDate){
+        BillEntity billToSave = new BillEntity();
+
+        billToSave.setDate(currentDate);
+        Client client = clientService.getClient(clientId);
+        billToSave.setClient(modelMapper.map(client, ClientEntity.class));
+
+        // Save the bill entity to obtain its ID
+        return billJpaRepository.save(billToSave);
     }
 
     private Boolean checkProductStock(UUID productId, Integer quantity){
