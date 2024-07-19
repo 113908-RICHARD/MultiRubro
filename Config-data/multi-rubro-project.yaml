@@ -3,7 +3,7 @@ server:
 
 app:
   name: 'Billing service'
-  desc: 'this service manages the bills and the details of them'
+  desc: 'this service manages the bills and the details of them. Also de clients'
   version: '1.0'
   url: http://localhost:8082
   dev-name: Genaro
