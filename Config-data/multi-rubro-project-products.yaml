@@ -2,6 +2,21 @@ server:
   port: 8085
 
 
+app:
+  name: 'Products-providers service'
+  desc: 'this service manages products and their providers'
+  version: '1.0'
+  url: http://localhost:8085
+  dev-name: Genaro
+  dev-email: genarorichard@outlook.com
+
+#SPRING DOC PROPERTIES
+springdoc:
+  packages-to-scan: com.example.multirubroproyectproducts.controllers
+  show-actuator: true
+  swagger-ui:
+    disable-swagger-default-url: true
+    path: /swagger-ui.html
 
 #DATABASE CONFIG
 spring:
