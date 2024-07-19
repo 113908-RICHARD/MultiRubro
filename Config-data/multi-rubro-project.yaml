@@ -2,9 +2,9 @@ server:
   port: 8082
 
 app:
-  name: '@project.name@'
-  desc: '@project.description@'
-  version: '@project.version@'
+  name: 'Billing service'
+  desc: 'this service manages the bills and the details of them'
+  version: '1.0'
   url: http://localhost:8082
   dev-name: Genaro
   dev-email: genarorichard@outlook.com
@@ -30,7 +30,7 @@ springdoc:
     disable-swagger-default-url: true
     path: /swagger-ui.html
 
-#RABBITMQ CONFIG
+
 
 
 
