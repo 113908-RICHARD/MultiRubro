@@ -1,6 +1,13 @@
 server:
   port: 8085
-
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
 
 app:
   name: 'Products-providers service'
