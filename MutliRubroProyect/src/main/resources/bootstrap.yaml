@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: multi-rubro-project
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8083
+
+
+
+
+

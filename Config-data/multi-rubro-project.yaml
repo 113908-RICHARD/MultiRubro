@@ -1,0 +1,56 @@
+server:
+  port: 8082
+
+app:
+  name: '@project.name@'
+  desc: '@project.description@'
+  version: '@project.version@'
+  url: http://localhost:8082
+  dev-name: Genaro
+  dev-email: genarorichard@outlook.com
+
+#DATABASE CONFIG
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+#SPRING DOC PROPERTIES
+springdoc:
+  packages-to-scan: com.example.MultiRubro.controllers
+  show-actuator: true
+  swagger-ui:
+    disable-swagger-default-url: true
+    path: /swagger-ui.html
+
+#RABBITMQ CONFIG
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
+
+
+    ################# OPTIONAL CONFIG FOR POSTGRESQL DATABASE USAGE #####################
+## Spring JPA ##
+#spring.jpa.database=POSTGRESQL
+
+#spring.jpa.show-sql=true
+#spring.jpa.defer-datasource-initialization=true
+
+#spring.jpa.generate-ddl=true
+#spring.jpa.hibernate.ddl-auto=update
+
+#spring.datasource.url=jdbc:postgresql://localhost:5432/MultiRubro
+#spring.datasource.username=postgres
+#spring.datasource.password=root
+
+#spring.datasource.driver-class-name=org.postgresql.Driver
+#spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
