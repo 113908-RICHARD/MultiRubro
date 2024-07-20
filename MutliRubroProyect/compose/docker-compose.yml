@@ -1,0 +1,63 @@
+version: '3.8'
+#UPDATED 6/7
+services:
+  mysql-database:
+    image: mysql:latest
+    container_name: mysql-database
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: waddler
+      MYSQL_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - /var/lib/mysql_data:/var/lib/mysql
+    networks:
+      - waddler-network
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0.2
+    container_name: keycloak
+    environment:
+      DB_VENDOR: MYSQL
+      DB_ADDR: mysql-database  # Use the service name of MySQL container here
+      DB_DATABASE: keycloak
+      DB_USER: waddler
+      DB_PASSWORD: root
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_PROFILE: dev
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-database
+    networks:
+      - waddler-network
+    command: start-dev
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   # RabbitMQ main port
+      - "15672:15672" # RabbitMQ management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - rabbitmq_logs:/var/log/rabbitmq
+    networks:
+      - waddler-network
+
+volumes:
+  rabbitmq_data:
+  rabbitmq_logs:
+
+networks:
+  waddler-network:
+    driver: bridge
+
