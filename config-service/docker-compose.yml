@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  config-service:
+    image: genarorichard/config-service:v1.0
+    ports:
+      - "8000:8000"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
