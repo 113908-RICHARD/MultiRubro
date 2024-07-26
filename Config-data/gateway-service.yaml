@@ -16,17 +16,17 @@ spring:
       discovery:
         locator:
           enabled: true
-    routes:
-      - id: multi-rubro-project
-        uri: lb://multi-rubro-project
-        predicates:
-          - Path=/bills/**
-          - Path=/clients/**
-          - Path=/sellings/**
-          - Path=/users/**
-      - id: multi-rubro-project-products
-        uri: lb://multi-rubro-project-products
-        predicates:
-          - Path=/categories/**
-          - Path=/products/**
-          - Path=/providers/**
+      routes:
+        - id: multi-rubro-project
+          uri: lb://multi-rubro-project
+          predicates:
+            - Path=/bills/**
+            - Path=/clients/**
+            - Path=/sellings/**
+            - Path=/users/**
+        - id: multi-rubro-project-products
+          uri: lb://multi-rubro-project-products
+          predicates:
+            - Path=/categories/**
+            - Path=/products/**
+            - Path=/providers/**
