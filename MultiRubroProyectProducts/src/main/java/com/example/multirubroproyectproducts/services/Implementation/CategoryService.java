@@ -12,6 +12,7 @@ import com.example.multirubroproyectproducts.requests.Products.UpdateProductCate
 import com.example.multirubroproyectproducts.responses.GenericResponse;
 import com.example.multirubroproyectproducts.services.ICategoryService;
 import jakarta.transaction.Transactional;
+import lombok.Setter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@Setter
 public class CategoryService  implements ICategoryService {
 
     @Autowired

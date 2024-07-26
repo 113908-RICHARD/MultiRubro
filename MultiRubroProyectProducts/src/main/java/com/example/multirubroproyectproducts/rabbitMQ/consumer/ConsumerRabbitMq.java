@@ -4,6 +4,8 @@ package com.example.multirubroproyectproducts.rabbitMQ.consumer;
 import com.example.multirubroproyectproducts.requests.Products.UpdateProductStockRequest;
 import com.example.multirubroproyectproducts.responses.GenericResponse;
 import com.example.multirubroproyectproducts.services.Implementation.ProductService;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -23,14 +25,17 @@ public class ConsumerRabbitMq {
     private static final Logger logger = LoggerFactory.getLogger(ConsumerRabbitMq.class);
 
     @RabbitListener(queues = {"UpdateStockQueue"})
-    public void recieveMessage(@Payload String message){
-        try {
+    public void recieveMessage(@Payload String message) throws JsonProcessingException {
+
             UpdateProductStockRequest updateRequest = objectMapper.readValue(message, UpdateProductStockRequest.class);
+            if (updateRequest == null){
+                throw new JsonParseException("Invalid message received");
+            }
+
             GenericResponse<Boolean> response = productService.updateProductStock(updateRequest);
+
             logger.info(response.getMessage());
 
-        } catch (Exception e) {
-            logger.error("Error converting JSON to Update stock request object: {}", e.getMessage());
-        }
+
     }
 }
