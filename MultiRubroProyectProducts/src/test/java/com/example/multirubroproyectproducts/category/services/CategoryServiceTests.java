@@ -20,10 +20,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
@@ -176,6 +173,52 @@ public class CategoryServiceTests {
         GenericResponse<Category> response = categoryService.updateCategory(request);
 
         Assertions.assertEquals("Database error",response.getMessage());
+    }
+    @Test
+    public void getCategoriesSuccessTest(){
+        List<CategoryEntity> categories = new ArrayList<>();
+        categories.add(new CategoryEntity(new ArrayList<>(),"Books"));
+        categories.add(new CategoryEntity(new ArrayList<>(),"Electronic"));
+        categories.add(new CategoryEntity(new ArrayList<>(),"Sports"));
+
+        Mockito.when(categoryRepository.findAll())
+                .thenReturn(categories);
+
+        GenericResponse<List<Category>> response = categoryService.getCategories();
+
+        Assertions.assertEquals(response.getData().size() + " Categories found", response.getMessage());
+    }
+    @Test
+    public void getCategoriesNotFoundTest(){
+
+        Mockito.when(categoryRepository.findAll())
+                .thenReturn(Collections.emptyList());
+
+        GenericResponse<List<Category>> response = categoryService.getCategories();
+
+        Assertions.assertEquals("No categories found", response.getMessage());
+    }
+    @Test
+    public void getCategoryByIdSuccessTest(){
+        CategoryEntity category = new CategoryEntity(new ArrayList<>(), "Electric");
+        category.setId((UUID.fromString("07580510-f08d-4b35-a323-d1379f29e82e")));
+        Mockito.when(categoryRepository.findById(any(UUID.class))).thenReturn(Optional.of(category));
+
+        GenericResponse<Category> response = categoryService.getCategoryById(category.getId());
+        Assertions.assertEquals("Category found", response.getMessage());
+    }
+    @Test
+    public void getCategoryByIdNotFoundTest(){
+
+        Mockito.when(categoryRepository.findById(any(UUID.class))).thenReturn(Optional.empty());
+
+        GenericResponse<Category> response = categoryService.getCategoryById(UUID.randomUUID());
+        Assertions.assertEquals("Category not found", response.getMessage());
+    }
+
+    @Test
+    public void updateCategorySuccessTest(){
+
     }
 
 

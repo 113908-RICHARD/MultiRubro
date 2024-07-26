@@ -90,7 +90,7 @@ public class CategoryService  implements ICategoryService {
         for (CategoryEntity categoryEntity : categoryEntities){
             categories.add(modelMapper.map(categoryEntity, Category.class));
         }
-        return genericResponse.createResponse(HttpStatus.OK,categoryEntities.size() + "Categories found", categories);
+        return genericResponse.createResponse(HttpStatus.OK,categoryEntities.size() + " Categories found", categories);
     }
 
     @Override
