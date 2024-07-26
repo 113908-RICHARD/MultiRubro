@@ -33,6 +33,19 @@ spring:
           uri: lb://multi-rubro-project
           predicates:
             - Path=/users/**
+        - id: multi-rubro-project-products-categories
+          uri: lb://multi-rubro-project-products
+          predicates:
+            - Path=/categories/**
+        - id: multi-rubro-project-products-providers
+          uri: lb://multi-rubro-project-products
+          predicates:
+            - Path=/providers/**
+        - id: multi-rubro-project-products-products
+          uri: lb://multi-rubro-project-products
+          predicates:
+            - Path=/products/**
+
 
 
 

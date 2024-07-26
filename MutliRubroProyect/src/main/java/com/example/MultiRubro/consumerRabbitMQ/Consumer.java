@@ -3,6 +3,8 @@ package com.example.MultiRubro.consumerRabbitMQ;
 
 
 import com.example.MultiRubro.models.Client;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,22 +23,15 @@ public class Consumer {
     private ObjectMapper objectMapper;
     private static final Logger logger = LoggerFactory.getLogger(Consumer.class);
     @RabbitListener(queues = {"UpdateStockQueue"})
-    public void recieveMessage(@Payload String message){
+    public void recieveMessage(@Payload String message) throws JsonProcessingException {
         try {
             Client client = objectMapper.readValue(message, Client.class);
             logger.info("Received message: {}", client);
-            makeSlow();
-        } catch (Exception e) {
+
+        } catch (JsonParseException e) {
             logger.error("Error converting JSON to Client object: {}", e.getMessage());
         }
     }
 
-    private void makeSlow(){
-            try{
-                Thread.sleep(500);
-            }catch (InterruptedException e){
-                e.printStackTrace();
-            }
 
-    }
 }
