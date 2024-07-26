@@ -12,7 +12,7 @@ app:
   name: 'Billing service'
   desc: 'this service manages the bills and the details of them. Also de clients'
   version: '1.0'
-  url: http://localhost:8082
+  url: http://localhost:${server.port}
   dev-name: Genaro
   dev-email: genarorichard@outlook.com
 
@@ -35,7 +35,7 @@ springdoc:
   show-actuator: true
   swagger-ui:
     disable-swagger-default-url: true
-    path: /swagger-ui.html
+    path: multirubro/swagger-ui.html
 
 
 

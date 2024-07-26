@@ -13,7 +13,7 @@ app:
   name: 'Products-providers service'
   desc: 'this service manages products and their providers'
   version: '1.0'
-  url: http://localhost:8085
+  url: http://localhost:${server.port}
   dev-name: Genaro
   dev-email: genarorichard@outlook.com
 
@@ -23,7 +23,7 @@ springdoc:
   show-actuator: true
   swagger-ui:
     disable-swagger-default-url: true
-    path: /swagger-ui.html
+    path: multirubroproducts/swagger-ui.html
 
 #DATABASE CONFIG
 spring:
