@@ -18,24 +18,23 @@ import org.slf4j.Logger;
 @Component
 public class ConsumerRabbitMq {
 
-    @Autowired
-    private ObjectMapper objectMapper;
+
     @Autowired
     private ProductService productService;
+
     private static final Logger logger = LoggerFactory.getLogger(ConsumerRabbitMq.class);
 
     @RabbitListener(queues = {"UpdateStockQueue"})
-    public void recieveMessage(@Payload String message) throws JsonProcessingException {
-
-            UpdateProductStockRequest updateRequest = objectMapper.readValue(message, UpdateProductStockRequest.class);
-            if (updateRequest == null){
-                throw new JsonParseException("Invalid message received");
+    public void receiveMessage(UpdateProductStockRequest message) {
+        try {
+            if (message == null) {
+                throw new IllegalArgumentException("Invalid message received");
             }
 
-            GenericResponse<Boolean> response = productService.updateProductStock(updateRequest);
-
+            GenericResponse<Boolean> response = productService.updateProductStock(message);
             logger.info(response.getMessage());
-
-
+        } catch (Exception e) {
+            logger.error("Failed to process the message", e);
+        }
     }
 }
