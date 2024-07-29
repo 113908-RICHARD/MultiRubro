@@ -11,3 +11,9 @@ spring:
     port: 5672
     username: user
     password: password
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/SPRINGBOOT

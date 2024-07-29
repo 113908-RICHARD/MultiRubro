@@ -14,7 +14,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8085/realms/SPRINGBOOT
+          issuer-uri: http://localhost:8080/realms/SPRINGBOOT
 
 
 
