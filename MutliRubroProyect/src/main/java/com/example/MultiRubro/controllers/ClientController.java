@@ -7,6 +7,7 @@ import com.example.MultiRubro.services.ClientService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,8 +18,12 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ClientController {
 
 
+    private final ClientService clientService;
+
     @Autowired
-    private ClientService clientService;
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
+    }
 
 
 
@@ -41,8 +46,10 @@ public class ClientController {
     private ResponseEntity<Client> postClient(@RequestBody Client client){
         return  ResponseEntity.ok(clientService.createClient(client));
     }
-    @DeleteMapping("")
-    private ResponseEntity<Client>deleteClient(@RequestParam Long id){
+
+    @DeleteMapping("/{id}")
+
+    private ResponseEntity<Client>deleteClient(@PathVariable Long id){
         return ResponseEntity.ok(clientService.deleteClient(id));
     }
     @PutMapping

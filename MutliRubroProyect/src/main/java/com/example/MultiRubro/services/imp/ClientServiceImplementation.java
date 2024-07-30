@@ -12,6 +12,7 @@ import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -33,6 +34,7 @@ public class ClientServiceImplementation implements ClientService {
 
 
     @Override
+    @PreAuthorize("hasRole('multirubro-user')")
     public Client createClient(Client client) {
 
         ClientEntity clientEntity = modelMapper.map(client,ClientEntity.class);
