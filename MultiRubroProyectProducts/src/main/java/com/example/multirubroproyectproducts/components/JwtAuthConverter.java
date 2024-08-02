@@ -1,8 +1,6 @@
-package com.example.MultiRubro.components;
+package com.example.multirubroproyectproducts.components;
 
 
-import org.modelmapper.Converter;
-import org.modelmapper.spi.MappingContext;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,7 +10,6 @@ import org.springframework.security.oauth2.jwt.JwtClaimNames;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.stereotype.Component;
-import org.springframework.core.convert.converter.Converter.*;
 
 import java.util.Collection;
 import java.util.Map;
@@ -21,8 +18,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Component
-public class JwtAuthConverter implements org.springframework.core.convert.converter.Converter<Jwt, AbstractAuthenticationToken>{
-
+public class JwtAuthConverter  implements  org.springframework.core.convert.converter.Converter<Jwt, AbstractAuthenticationToken> {
 
     @Value("${keycloak.clientId}")
     private String clientId;
@@ -59,6 +55,8 @@ public class JwtAuthConverter implements org.springframework.core.convert.conver
                 .collect(Collectors.toSet());
 
     }
+
+
 
     @Override
     public AbstractAuthenticationToken convert(Jwt jwt) {

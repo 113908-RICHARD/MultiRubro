@@ -23,7 +23,6 @@ public class BillController {
     private BillService billService;
 
 
-
     @CircuitBreaker(name = "productsCB",fallbackMethod = "fallBackCreateBill")
     @PostMapping("/create")
     public ResponseEntity<BillResponse> createBill(@RequestBody CreateBillRequest request) {

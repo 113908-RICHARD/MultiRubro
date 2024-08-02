@@ -9,7 +9,10 @@ import lombok.*;
 @Getter
 public class User {
 
-    Long userId;
-    String userName;
-    String password;
+    private Long userId;
+    private String userName;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private String email;
 }

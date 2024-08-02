@@ -1,14 +1,17 @@
 package com.example.MultiRubro.controllers;
 
 
+import com.example.MultiRubro.Requests.CreateClientRequest;
 import com.example.MultiRubro.models.Client;
 import com.example.MultiRubro.services.ClientService;
 
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -41,10 +44,15 @@ public class ClientController {
     }
 
 
-
     @PostMapping("")
-    private ResponseEntity<Client> postClient(@RequestBody Client client){
-        return  ResponseEntity.ok(clientService.createClient(client));
+    private ResponseEntity<Client> postClient(@RequestBody CreateClientRequest client){
+
+        try{
+            return ResponseEntity.ok(clientService.createClient(client));
+        }catch (Exception e){
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,e.getMessage());
+        }
+
     }
 
     @DeleteMapping("/{id}")

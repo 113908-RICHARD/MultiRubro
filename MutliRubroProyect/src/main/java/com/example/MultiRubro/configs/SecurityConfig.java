@@ -2,6 +2,7 @@ package com.example.MultiRubro.configs;
 
 
 import com.example.MultiRubro.components.JwtAuthConverter;
+import jakarta.ws.rs.HttpMethod;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -31,7 +32,9 @@ public class SecurityConfig {
 
         http
                 .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth ->auth.anyRequest().authenticated())
+                .authorizeHttpRequests(auth ->auth
+
+                        .anyRequest().authenticated())
                 .oauth2ResourceServer(oauth2 ->oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtConverter)));
 
         return http.build();

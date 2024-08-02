@@ -39,4 +39,5 @@ public class CategoryController {
     public ResponseEntity<GenericResponse<String>> updateCategoryProduct(@RequestBody UpdateProductCategoriesRequest request){
         return ResponseEntity.ok(categoryService.updateCategoryProduct(request));
     }
+
 }

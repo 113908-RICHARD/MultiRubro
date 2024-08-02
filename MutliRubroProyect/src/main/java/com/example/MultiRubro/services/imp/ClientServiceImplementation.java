@@ -1,5 +1,7 @@
 package com.example.MultiRubro.services.imp;
 
+import com.example.MultiRubro.Requests.CreateClientRequest;
+import com.example.MultiRubro.Requests.CreateUserRequest;
 import com.example.MultiRubro.entities.ClientEntity;
 import com.example.MultiRubro.entities.UserEntity;
 import com.example.MultiRubro.models.Client;
@@ -7,8 +9,10 @@ import com.example.MultiRubro.models.User;
 import com.example.MultiRubro.repositories.jpa.ClientEntityJpaRepository;
 import com.example.MultiRubro.repositories.jpa.UserEntityJpaRepository;
 import com.example.MultiRubro.services.ClientService;
+import com.example.MultiRubro.services.KeycloakService;
 import com.example.MultiRubro.services.UserService;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,18 +37,21 @@ public class ClientServiceImplementation implements ClientService {
     private ModelMapper modelMapper;
 
 
+
     @Override
-    @PreAuthorize("hasRole('multirubro-user')")
-    public Client createClient(Client client) {
+
+    @Transactional
+
+    public Client createClient(CreateClientRequest client) {
 
         ClientEntity clientEntity = modelMapper.map(client,ClientEntity.class);
-        User user = userService.createUser(client.getUser());
-        clientEntity.setUser(modelMapper.map(user,UserEntity.class));
-
-
-
-        return modelMapper.map(clientEntityJpaRepository.save(clientEntity),Client.class);
-
+        try {
+            User user = userService.createUser(client.getUserRequest());
+            clientEntity.setUser(modelMapper.map(user,UserEntity.class));
+            return modelMapper.map(clientEntityJpaRepository.save(clientEntity),Client.class);
+        }catch (Exception e){
+            throw e;
+        }
 
     }
 
@@ -102,4 +109,6 @@ public class ClientServiceImplementation implements ClientService {
         return clientToDelete;
 
     }
+
+
 }
