@@ -22,5 +22,7 @@ public class CreateUserRequest
 
     private String password;
     private String email;
+    @JsonProperty("user-type")
+    private UserType userType;
 
 }

@@ -16,6 +16,8 @@ app:
   dev-name: Genaro
   dev-email: genarorichard@outlook.com
 
+
+
 #DATABASE CONFIG
 spring:
   datasource:
@@ -23,6 +25,12 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password: password
+  application:
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: user
+      password: password
 
   h2:
     console:

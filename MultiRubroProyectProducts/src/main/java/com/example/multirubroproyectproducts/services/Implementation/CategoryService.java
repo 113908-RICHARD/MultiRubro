@@ -16,6 +16,7 @@ import lombok.Setter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -42,6 +43,7 @@ public class CategoryService  implements ICategoryService {
 
     @Override
     @Transactional
+    @PreAuthorize("hasAnyRole('multirubro-product-manager')")
     public GenericResponse<Category> createCategory(CategoryRequest request) {
 
         List<CategoryEntity> categories = categoryRepository.findAll();
@@ -62,6 +64,7 @@ public class CategoryService  implements ICategoryService {
 
     @Override
     @Transactional
+    @PreAuthorize("hasAnyRole('multirubro-product-manager')")
     public GenericResponse<Category> updateCategory(UpdateCategoryRequest request) {
 
         Optional<CategoryEntity> categoryEntity = categoryRepository.findById(request.getId());
@@ -107,6 +110,7 @@ public class CategoryService  implements ICategoryService {
     }
 
     @Override
+    @PreAuthorize("hasAnyRole('multirubro-product-manager')")
     public GenericResponse<String> updateCategoryProduct(UpdateProductCategoriesRequest request) {
 
         Optional<CategoryEntity> categoryEntity = categoryRepository.findById(request.getCategoryId());

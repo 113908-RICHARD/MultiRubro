@@ -18,6 +18,7 @@ import com.example.multirubroproyectproducts.services.IProviderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
@@ -68,6 +69,7 @@ public class ProductService implements IProductService {
 
     @Override
     @Transactional
+    @PreAuthorize("hasAnyRole('multirubro-product-manager')")
     public GenericResponse<SimpleProductResponse> createProduct(ProductRequest product) {
 
         ProductEntity productEntity = getProductEntity(product);
@@ -93,6 +95,7 @@ public class ProductService implements IProductService {
 
 
     @Override
+    @PreAuthorize("hasAnyRole('multirubro-product-manager')")
     public GenericResponse<Product> updateProduct(UpdateProductRequest product) {
         return null;
     }

@@ -14,7 +14,7 @@ public class RabbitConfig {
 
     @Bean
     public Queue queue() {
-        return new Queue("UpdateStockQueue");
+        return new Queue("UpdateStockQueue",true);
     }
 
     @Bean

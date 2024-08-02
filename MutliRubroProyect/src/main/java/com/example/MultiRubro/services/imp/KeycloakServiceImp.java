@@ -2,6 +2,7 @@ package com.example.MultiRubro.services.imp;
 
 
 import com.example.MultiRubro.Requests.CreateUserRequest;
+import com.example.MultiRubro.Requests.UserType;
 import com.example.MultiRubro.services.KeycloakService;
 import jakarta.ws.rs.core.Response;
 import org.keycloak.admin.client.resource.*;
@@ -18,6 +19,8 @@ import org.keycloak.admin.client.Keycloak;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static com.example.MultiRubro.Requests.UserType.ADMIN;
 
 @Service
 public class KeycloakServiceImp implements KeycloakService {
@@ -37,11 +40,8 @@ public class KeycloakServiceImp implements KeycloakService {
     @Override
     public Boolean createUser(CreateUserRequest keyCloakUser) {
         UserRepresentation user = getUserRepresentation(keyCloakUser);
-
         UsersResource usersResource = getUsersResource();
-
         Response response = usersResource.create(user);
-
 
         if (response.getStatus() != 201) {
             String errorMessage = response.readEntity(String.class);
@@ -50,9 +50,7 @@ public class KeycloakServiceImp implements KeycloakService {
 
         UserRepresentation createdUser = usersResource.search(keyCloakUser.getUserName()).get(0);
         String userId = createdUser.getId();
-        assignRole(userId,"multirubro-user");
-
-
+       assignUserRole(userId, keyCloakUser.getUserType());
 
         return true;
     }
@@ -64,6 +62,23 @@ public class KeycloakServiceImp implements KeycloakService {
 
 
     /*AUXILIARY METHODS FOR USER CREATION*/
+
+    private void assignUserRole(String userId, UserType userType) {
+
+        switch (userType) {
+            case ADMIN:
+                assignRole(userId,"multirubro-admin");
+                break;
+            case USER:
+                assignRole(userId,"multirubro-user");
+                break;
+            case PRODUCT_MANAGER:
+                assignRole(userId,"multirubro-product-manager");
+                break;
+            default:
+                throw new RuntimeException("Invalid user type");
+        }
+    }
 
     private UsersResource getUsersResource() {
         RealmResource realmResource = keyCloak.realm(realm);
