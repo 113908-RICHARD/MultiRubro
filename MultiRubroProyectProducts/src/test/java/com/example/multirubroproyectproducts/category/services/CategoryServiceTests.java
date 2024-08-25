@@ -2,10 +2,13 @@ package com.example.multirubroproyectproducts.category.services;
 
 import com.example.multirubroproyectproducts.configs.GenericResponseConfig;
 import com.example.multirubroproyectproducts.entities.CategoryEntity;
+import com.example.multirubroproyectproducts.entities.ProductEntity;
 import com.example.multirubroproyectproducts.models.Category;
 import com.example.multirubroproyectproducts.repositories.CategoryRepository;
+import com.example.multirubroproyectproducts.repositories.ProductRepository;
 import com.example.multirubroproyectproducts.requests.Categories.CategoryRequest;
 import com.example.multirubroproyectproducts.requests.Categories.UpdateCategoryRequest;
+import com.example.multirubroproyectproducts.requests.Products.UpdateProductCategoriesRequest;
 import com.example.multirubroproyectproducts.responses.GenericResponse;
 import com.example.multirubroproyectproducts.services.Implementation.CategoryService;
 import org.junit.jupiter.api.Assertions;
@@ -46,12 +49,13 @@ public class CategoryServiceTests {
     @Mock
     private ModelMapper modelMapper;
 
-    private GenericResponseConfig genericResponseConfig;
+    @Mock
+    private ProductRepository productRepository;
 
     @BeforeEach
     public void setUp(){
         MockitoAnnotations.openMocks(this);
-        genericResponseConfig = spy(new GenericResponseConfig());
+        GenericResponseConfig genericResponseConfig = new GenericResponseConfig();
         categoryService.setGenericResponse(genericResponseConfig);
 
     }
@@ -217,9 +221,85 @@ public class CategoryServiceTests {
     }
 
     @Test
-    public void updateCategorySuccessTest(){
+    public void updateCategoryProductSuccessTest(){
+        CategoryEntity category = new CategoryEntity(new ArrayList<>(), "Electric");
+        category.setId((UUID.fromString("07580510-f08d-4b35-a323-d1379f29e82e")));
+        List<ProductEntity> products = new ArrayList<>();
+        products.add(new ProductEntity("product 1",33.3,Collections.emptyList(),Collections.emptyList(),33));
+        category.setProducts(products);
+
+        List<ProductEntity> productsToAdd = new ArrayList<>();
+        productsToAdd.add(new ProductEntity("product 2",33.3,Collections.emptyList(),Collections.emptyList(),33));
+
+
+        Mockito.when(categoryRepository.findById(any(UUID.class))).thenReturn(Optional.of(category));
+
+        UpdateProductCategoriesRequest request = UpdateProductCategoriesRequest.builder().build();
+        request.setCategoryId(category.getId());
+        List<UUID> productIds = new ArrayList<>();
+        productIds.add(UUID.fromString("9fb38ae1-feda-46ad-9df4-52e11ae2a652"));
+        request.setProducts(productIds);
+
+        Mockito.when(productRepository.findById(UUID.fromString("9fb38ae1-feda-46ad-9df4-52e11ae2a652"))).thenReturn(Optional.of(productsToAdd.get(0)));
+
+        GenericResponse<String> response = categoryService.updateCategoryProduct(request);
+        Assertions.assertEquals("Category updated successfully",response.getMessage());
+
+
+
+
+
 
     }
+
+    @Test
+    public void updateCategoryProductNotFoundTest(){
+        Mockito.when(categoryRepository.findById(any(UUID.class))).thenReturn(Optional.empty());
+
+        GenericResponse<String> response = categoryService.updateCategoryProduct(UpdateProductCategoriesRequest
+                .builder().categoryId(UUID.fromString("9fb38ae1-feda-46ad-9df4-52e11ae2a652")).build());
+
+        Assertions.assertEquals("Category not found",response.getMessage());
+
+
+
+
+    }
+
+    @Test
+    public void updateCategoryProductInternalServerErrorTest(){
+
+        CategoryEntity category = new CategoryEntity(new ArrayList<>(), "Electric");
+        category.setId((UUID.fromString("07580510-f08d-4b35-a323-d1379f29e82e")));
+        List<ProductEntity> products = new ArrayList<>();
+        products.add(new ProductEntity("product 1",33.3,Collections.emptyList(),Collections.emptyList(),33));
+        category.setProducts(products);
+
+        List<ProductEntity> productsToAdd = new ArrayList<>();
+        productsToAdd.add(new ProductEntity("product 2",33.3,Collections.emptyList(),Collections.emptyList(),33));
+
+
+        Mockito.when(categoryRepository.findById(any(UUID.class))).thenReturn(Optional.of(category));
+
+        UpdateProductCategoriesRequest request = UpdateProductCategoriesRequest.builder().build();
+        request.setCategoryId(category.getId());
+        List<UUID> productIds = new ArrayList<>();
+        productIds.add(UUID.fromString("9fb38ae1-feda-46ad-9df4-52e11ae2a652"));
+        request.setProducts(productIds);
+
+        Mockito.when(productRepository.findById(UUID.fromString("9fb38ae1-feda-46ad-9df4-52e11ae2a652"))).thenReturn(Optional.of(productsToAdd.get(0)));
+        Mockito.when(categoryRepository.save(any(CategoryEntity.class))).thenThrow(new RuntimeException());
+
+        try {
+            GenericResponse<String> response = categoryService.updateCategoryProduct(request);
+        }catch (RuntimeException e){
+            Assertions.assertEquals("500 INTERNAL_SERVER_ERROR",e.getMessage());
+        }
+
+
+    }
+
+
 
 
 }

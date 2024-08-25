@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import java.util.UUID;
 
-@Data
+
 @Setter
 @Getter
 public class UpdateCategoryRequest {

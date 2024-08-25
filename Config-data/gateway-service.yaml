@@ -55,7 +55,7 @@ spring:
           keycloak: # Use a consistent name here
             provider: keycloak # Match the provider name here
             client-id: springboot-client
-            client-secret: vjAHsGpGSfC56RLttCePu85WP5dOsQV4
+            client-secret: MHZN5VqeCn2cEw5Z1F9xiqy2KtqivqTd
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/springboot-client" # Use consistent naming
             scope: openid

@@ -120,10 +120,12 @@ public class CategoryService  implements ICategoryService {
             category.getProducts().addAll(getProductEntity(request.getProducts()));
             try {
                 categoryRepository.save(category);
-                return genericResponse.createResponse(HttpStatus.OK, "Category updated successfully", "SUCCESS");
+        return genericResponse.createResponse(HttpStatus.OK, "Category updated successfully", "SUCCESS");
+        //im aware that im not handling the error here correctly. If saving something on a database i should throw a database error or
+        //something like that
             }catch (Exception e){
                 throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,e.getMessage());
-            }
+}
 
         }else {
             return genericResponse.createResponse(HttpStatus.NOT_FOUND,"Category not found", "ERROR");

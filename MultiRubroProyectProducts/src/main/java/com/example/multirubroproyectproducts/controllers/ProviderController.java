@@ -6,6 +6,7 @@ import com.example.multirubroproyectproducts.requests.Providers.UpdateProviderRe
 import com.example.multirubroproyectproducts.responses.GenericResponse;
 import com.example.multirubroproyectproducts.responses.Provider.SimpleProviderResponse;
 import com.example.multirubroproyectproducts.services.IProviderService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +33,7 @@ public class ProviderController {
         return ResponseEntity.ok(providerService.createProvider(provider));
     }
     @PutMapping
-    public ResponseEntity<GenericResponse<SimpleProviderResponse>> updateProvider(@RequestBody UpdateProviderRequest provider) {
+    public ResponseEntity<GenericResponse<SimpleProviderResponse>> updateProvider(@RequestBody @Valid UpdateProviderRequest provider) {
         return ResponseEntity.ok(providerService.updateProvider(provider));
     }
     @PutMapping("/update-products")

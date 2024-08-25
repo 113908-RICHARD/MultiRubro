@@ -56,6 +56,7 @@ public class UserServiceImp implements UserService {
         return null;
     }
 
+
     @Override
     public Boolean createKeyCloakUser(CreateUserRequest userRequest) {
         return keycloakService.createUser(userRequest);

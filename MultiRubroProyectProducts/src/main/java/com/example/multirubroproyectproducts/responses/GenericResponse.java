@@ -3,7 +3,7 @@ package com.example.multirubroproyectproducts.responses;
 import lombok.*;
 import org.springframework.http.HttpStatus;
 
-@Data
+
 @Setter
 @Getter
 @AllArgsConstructor

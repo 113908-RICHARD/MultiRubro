@@ -46,10 +46,7 @@ springdoc:
     path: multirubro/swagger-ui.html
 
 
-
-
-
-    ################# OPTIONAL CONFIG FOR POSTGRESQL DATABASE USAGE #####################
+  ################# OPTIONAL CONFIG FOR POSTGRESQL DATABASE USAGE #####################
 ## Spring JPA ##
 #spring.jpa.database=POSTGRESQL
 

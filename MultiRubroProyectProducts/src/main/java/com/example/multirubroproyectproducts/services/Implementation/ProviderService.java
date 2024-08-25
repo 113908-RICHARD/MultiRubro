@@ -13,6 +13,8 @@ import com.example.multirubroproyectproducts.responses.Product.SimpleProductResp
 import com.example.multirubroproyectproducts.responses.Provider.SimpleProviderResponse;
 import com.example.multirubroproyectproducts.services.IProviderService;
 import jakarta.transaction.Transactional;
+import lombok.Getter;
+import lombok.Setter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,6 +28,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+
+@Setter
 public class ProviderService implements IProviderService {
 
     @Autowired
@@ -88,6 +92,7 @@ public class ProviderService implements IProviderService {
     @Override
     @Transactional
     public GenericResponse<SimpleProviderResponse> updateProvider(UpdateProviderRequest request) {
+
 
         Optional<ProviderEntity> providerEntity = providerRepository.findById(request.getId());
         if (providerEntity.isEmpty()) {
