@@ -141,7 +141,7 @@ public class BillServiceImp implements BillService {
 
     private List<SellingResponse> getSellingResponseList( List<SellingRequest> sellingList, Long savedBill){
         List<SellingResponse> sellingResponseList = new ArrayList<>();
-        // Create and save the sellings
+
         for (SellingRequest sell : sellingList) {
             SellingEntity sellingEntity = new SellingEntity();
             sellingEntity.setBillId(savedBill);

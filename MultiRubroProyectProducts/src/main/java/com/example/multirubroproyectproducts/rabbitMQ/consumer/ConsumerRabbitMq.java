@@ -25,7 +25,7 @@ public class ConsumerRabbitMq {
     private static final Logger logger = LoggerFactory.getLogger(ConsumerRabbitMq.class);
 
     @RabbitListener(queues = {"UpdateStockQueue"})
-    public void receiveMessage(UpdateProductStockRequest message) {
+    public void  receiveMessage(UpdateProductStockRequest message) {
         try {
             if (message == null) {
                 throw new IllegalArgumentException("Invalid message received");
