@@ -1,30 +1,90 @@
 version: '3.8'
 #UPDATED 2/8
 services:
+
+  config-service:
+    image: genarorichard/config-service:v1.0
+    ports:
+      - "8000:8000"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - waddler-network
+
+  eureka-service:
+    image: genarorichard/eureka-service
+    ports:
+      - "8761:8761"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - waddler-network
+
+
+  gateway-service:
+    image: genarorichard/gateway-service
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - waddler-network
+
+
+
   mysql-database:
     image: mysql:latest
     container_name: mysql-database
     environment:
       MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: mydatabase
+      MYSQL_DATABASE: keycloak
+      MYSQL_USER: waddler
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql_data_keycloak:/var/lib/mysql_keycloak
+    networks:
+      - waddler-network
+
+  mysql-database-multirubro:
+    image: mysql:latest
+    container_name: mysql-database-multirubro
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: multirubro
       MYSQL_USER: waddler
       MYSQL_PASSWORD: root
     ports:
       - "3307:3306"
     volumes:
-      - /var/lib/mysql_data:/var/lib/mysql
+      - /var/lib/mysql_data_multirubro:/var/lib/mysql_multirubro
     networks:
-      - waddler-network
+      - database-multirubro
+
+  mysql-database-multirubroproducts:
+    image: mysql:latest
+    container_name: mysql-database-multirubroproducts
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: multirubroproducts
+      MYSQL_USER: waddler
+      MYSQL_PASSWORD: root
+    ports:
+      - "3308:3306"
+    volumes:
+      - /var/lib/mysql_data_multirubroproducts:/var/lib/mysql_multirubroproducts
+    networks:
+      - database-multirubroproducts
 
   keycloak:
     image: quay.io/keycloak/keycloak:23.0.2
     container_name: keycloak
     environment:
-      DB_VENDOR: MYSQL
-      DB_ADDR: mysql-database  # Use the service name of MySQL container here
-      DB_DATABASE: keycloak
-      DB_USER: waddler
-      DB_PASSWORD: root
+      KC_DB: mysql
+      KC_DB_URL: jdbc:mysql://mysql-database:3306/keycloak    # Use the service name of MySQL container here
+      KC_DB_USERNAME: waddler
+      KC_DB_PASSWORD: root
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
       KEYCLOAK_PROFILE: dev
@@ -59,5 +119,9 @@ volumes:
 
 networks:
   waddler-network:
+    driver: bridge
+  database-multirubro:
+    driver: bridge
+  database-multirubroproducts:
     driver: bridge
 

@@ -21,10 +21,18 @@ app:
 #DATABASE CONFIG
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
+    url: jdbc:mysql://mysql-database-multirubro:3307/multirubro
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: waddler
+    password: root
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    defer-datasource-initialization: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
   application:
     rabbitmq:
       host: localhost
@@ -34,7 +42,7 @@ spring:
 
   h2:
     console:
-      enabled: true
+      enabled: false
       path: /h2-console
 
 #SPRING DOC PROPERTIES
@@ -46,22 +54,22 @@ springdoc:
     path: multirubro/swagger-ui.html
 
 
-  ################# OPTIONAL CONFIG FOR POSTGRESQL DATABASE USAGE #####################
-## Spring JPA ##
-#spring.jpa.database=POSTGRESQL
+    ################# OPTIONAL CONFIG FOR POSTGRESQL DATABASE USAGE #####################
+  ## Spring JPA ##
+  #spring.jpa.database=POSTGRESQL
 
-#spring.jpa.show-sql=true
-#spring.jpa.defer-datasource-initialization=true
+  #spring.jpa.show-sql=true
+  #spring.jpa.defer-datasource-initialization=true
 
-#spring.jpa.generate-ddl=true
-#spring.jpa.hibernate.ddl-auto=update
+  #spring.jpa.generate-ddl=true
+  #spring.jpa.hibernate.ddl-auto=update
 
-#spring.datasource.url=jdbc:postgresql://localhost:5432/MultiRubro
-#spring.datasource.username=postgres
-#spring.datasource.password=root
+  #spring.datasource.url=jdbc:postgresql://localhost:5432/MultiRubro
+  #spring.datasource.username=postgres
+  #spring.datasource.password=root
 
-#spring.datasource.driver-class-name=org.postgresql.Driver
-#spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+  #spring.datasource.driver-class-name=org.postgresql.Driver
+  #spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 resilience4j.circuitbreaker:
   instances:
     productsCB:
