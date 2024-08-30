@@ -3,6 +3,7 @@ version: '3.8'
 services:
 
   config-service:
+    container_name: config-service
     image: genarorichard/config-service:v1.0
     ports:
       - "8000:8000"
@@ -12,17 +13,21 @@ services:
       - waddler-network
 
   eureka-service:
-    image: genarorichard/eureka-service
+    container_name: eureka-service
+    image: genarorichard/eureka-service:last
+    environment:
+      CONFIG_SERVICE_HOST: config-service
+      EUREKA_HOST: eureka-service
+      SERVER_HOST: 8761
     ports:
       - "8761:8761"
-    environment:
-      SPRING_PROFILES_ACTIVE: docker
+
     networks:
       - waddler-network
 
 
   gateway-service:
-    image: genarorichard/gateway-service
+    image: genarorichard/gateway-service:last
     ports:
       - "8081:8081"
     environment:

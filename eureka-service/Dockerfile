@@ -4,6 +4,7 @@ FROM openjdk:21-jdk-slim
 
 # Add a volume pointing to /tmp
 VOLUME /tmp
+EXPOSE 8761
 
 # The application's jar file
 ARG JAR_FILE=target/*.jar
