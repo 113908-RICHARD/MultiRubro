@@ -33,7 +33,7 @@ services:
     ports:
       - "8081:8081"
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+
       CONFIG_SERVICE_HOST: config-service
       KEYCLOAK_HOST: keycloak
       EUREKA_HOST: eureka-service
