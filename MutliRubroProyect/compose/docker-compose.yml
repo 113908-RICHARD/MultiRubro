@@ -9,6 +9,8 @@ services:
       - "8000:8000"
     environment:
       SPRING_PROFILES_ACTIVE: docker
+      EUREKA_HOST: eureka-service
+
     networks:
       - waddler-network
 
@@ -17,8 +19,8 @@ services:
     image: genarorichard/eureka-service:last
     environment:
       CONFIG_SERVICE_HOST: config-service
-      EUREKA_HOST: eureka-service
-      SERVER_HOST: 8761
+
+
     ports:
       - "8761:8761"
 
@@ -32,6 +34,7 @@ services:
       - "8081:8081"
     environment:
       SPRING_PROFILES_ACTIVE: docker
+      CONFIG_SERVICE_HOST: config-service
     networks:
       - waddler-network
 
