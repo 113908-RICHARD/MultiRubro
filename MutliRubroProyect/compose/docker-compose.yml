@@ -35,6 +35,7 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: docker
       CONFIG_SERVICE_HOST: config-service
+      KEYCLOAK_HOST: keycloak
     networks:
       - waddler-network
 
