@@ -29,6 +29,7 @@ services:
 
 
   gateway-service:
+    container_name: gateway-service
     image: genarorichard/gateway-service:last
     ports:
       - "8081:8081"
