@@ -37,7 +37,8 @@ services:
       KEYCLOAK_HOST: keycloak
       EUREKA_HOST: eureka-service
       KEYCLOAK_INTERNAL_HOST: keycloak
-      KEYCLOAK_EXTERNAL_URL: http://localhost:8080
+      KEYCLOAK_EXTERNAL_URL: localhost:8080
+      CLIENT_SECRET: 9xXfqVsbcMvxdIlhx3oKO43b6pyeUoMN
     networks:
       - waddler-network
 
