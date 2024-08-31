@@ -44,7 +44,7 @@ services:
     container_name: multi-rubro-project
     image: genarorichard/multirubro:last
     environment:
-      CONFIG_SERVICE_HOST: config-service
+      CONFIG_SERVICE_URL: config-service
       KEYCLOAK_HOST: keycloak
       EUREKA_HOST: eureka-service
       KEYCLOAK_INTERNAL_HOST: keycloak
