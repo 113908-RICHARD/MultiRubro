@@ -15,7 +15,7 @@ eureka:
 #DATABASE CONFIG
 spring:
   datasource:
-    url: jdbc:mysql://mysql-database-multirubro:3307/multirubro
+    url: jdbc:mysql://mysql-database-multirubro:3306/multirubro
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: waddler
     password: root
