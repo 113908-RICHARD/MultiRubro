@@ -33,7 +33,6 @@ services:
     ports:
       - "8081:8081"
     environment:
-
       CONFIG_SERVICE_HOST: config-service
       KEYCLOAK_HOST: keycloak
       EUREKA_HOST: eureka-service
@@ -126,6 +125,7 @@ services:
 volumes:
   rabbitmq_data:
   rabbitmq_logs:
+
 
 networks:
   waddler-network:

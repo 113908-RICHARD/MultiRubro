@@ -1,17 +1,13 @@
-server:
-  port: 8081
-
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      default-zone: http://${EUREKA_HOST}:8761/eureka
-  instance:
-    hostname: ${EUREKA_HOST}
-
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://${CONFIG_SERVICE_HOST}:8000
 logging:
   level:
     org:
       springframework:
         security: DEBUG
+        cloud: DEBUG

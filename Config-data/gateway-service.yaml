@@ -6,9 +6,9 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      default-zone: http://${EUREKA_HOST}:8761/eureka
+      defaultZone: http://eureka-service:8761/eureka/
   instance:
-    hostname: ${EUREKA_HOST}
+    hostname: eureka-service
 
 spring:
   cloud:
@@ -57,7 +57,7 @@ spring:
             client-id: springboot-client
             client-secret: 69NkjD3gGtBFt204h70QnYO3ODf0X31S
             authorization-grant-type: authorization_code
-            redirect-uri: "http://keycloak/login/oauth2/code/springboot-client" # Use consistent naming
+            redirect-uri: "{baseUrl}/login/oauth2/code/springboot-client" # Use consistent naming
             scope: openid
         provider:
           keycloak: # Ensure this matches the registration provider

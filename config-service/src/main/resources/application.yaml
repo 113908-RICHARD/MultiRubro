@@ -1,10 +1,17 @@
 server:
   port: 8000
 spring:
+  application:
+    name: config-service
   cloud:
     config:
       server:
         git:
           uri: https://github.com/113908-RICHARD/MultiRubro
           default-label: main
-          search-paths: config-data
+          search-paths: Config-data
+
+logging:
+  level:
+    org.springframework.cloud.config: TRACE
+    org.springframework.cloud.context.config: TRACE
