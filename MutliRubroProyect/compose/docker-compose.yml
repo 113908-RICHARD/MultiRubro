@@ -52,6 +52,7 @@ services:
       CLIENT_SECRET: 9xXfqVsbcMvxdIlhx3oKO43b6pyeUoMN
     networks:
       - waddler-network
+      - database-multirubro
 
   mysql-database:
     image: mysql:latest

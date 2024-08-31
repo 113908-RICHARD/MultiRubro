@@ -5,36 +5,35 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      default-zone: http://localhost:8761/eureka
+      default-zone: http://${EUREKA_HOST}:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-app:
-  name: 'Products-providers service'
-  desc: 'this service manages products and their providers'
-  version: '1.0'
-  url: http://localhost:8080
-  dev-name: Genaro
-  dev-email: genarorichard@outlook.com
+
 
 #SPRING DOC PROPERTIES
-springdoc:
-  packages-to-scan: com.example.multirubroproyectproducts.controllers
-  show-actuator: true
-  swagger-ui:
-    disable-swagger-default-url: true
-    path: multirubroproducts/swagger-ui.html
+
 
 #DATABASE CONFIG
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
+    url: jdbc:mysql://mysql-database-multirubro:3306/multirubro
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: waddler
+    password: root
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    defer-datasource-initialization: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  application:
+
 
   h2:
     console:
-      enabled: true
+      enabled: false
       path: /h2-console
 

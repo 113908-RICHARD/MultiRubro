@@ -4,10 +4,10 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8000
+      uri: http://${CONFIG_SERVICE_URL}:8000
 
   rabbitmq:
-    host: localhost
+    host: ${RABBITMQ_HOST}
     port: 5672
     username: user
     password: password
@@ -16,7 +16,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/SPRINGBOOT
+          issuer-uri: http://${KEYCLOAK_INTERNAL_HOST:localhost}:8080:8080/realms/SPRINGBOOT
 
 keycloak:
   clientId: springboot-client
