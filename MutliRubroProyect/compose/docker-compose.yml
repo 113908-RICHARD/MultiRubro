@@ -54,6 +54,20 @@ services:
       - waddler-network
       - database-multirubro
 
+  multi-rubro-project-products:
+    container_name: multi-rubro-project-products
+    image: genarorichard/multirubroproducts:last
+    environment:
+      CONFIG_SERVICE_URL: config-service
+      KEYCLOAK_HOST: keycloak
+      EUREKA_HOST: eureka-service
+      KEYCLOAK_INTERNAL_HOST: keycloak
+      RABBITMQ_HOST: rabbitmq
+      CLIENT_SECRET: 9xXfqVsbcMvxdIlhx3oKO43b6pyeUoMN
+    networks:
+      - waddler-network
+      - database-multirubroproducts
+
   mysql-database:
     image: mysql:latest
     container_name: mysql-database
