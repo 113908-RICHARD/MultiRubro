@@ -6,9 +6,9 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://eureka-service:8761/eureka/
+      defaultZone: http://${EUREKA_HOST}:8761/eureka/
   instance:
-    hostname: eureka-service
+    hostname: ${EUREKA_HOST}
 
 spring:
   cloud:
@@ -61,11 +61,11 @@ spring:
             scope: openid
         provider:
           keycloak: # Ensure this matches the registration provider
-            issuer-uri: http://localhost:8080/realms/SPRINGBOOT
-            authorization-uri: http://localhost:8080/realms/SPRINGBOOT/protocol/openid-connect/auth
-            token-uri: http://localhost:8080/realms/SPRINGBOOT/protocol/openid-connect/token
-            user-info-uri: http://localhost:8080/realms/SPRINGBOOT/protocol/openid-connect/userinfo
-            jwk-set-uri: http://localhost:8080/realms/SPRINGBOOT/protocol/openid-connect/certs
+            issuer-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT
+            authorization-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/auth
+            token-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/token
+            user-info-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/userinfo
+            jwk-set-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/certs
 
 
 
