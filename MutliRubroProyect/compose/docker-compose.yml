@@ -36,6 +36,8 @@ services:
       CONFIG_SERVICE_HOST: config-service
       KEYCLOAK_HOST: keycloak
       EUREKA_HOST: eureka-service
+      KEYCLOAK_INTERNAL_HOST: keycloak
+      KEYCLOAK_EXTERNAL_URL: http://localhost:8080
     networks:
       - waddler-network
 
