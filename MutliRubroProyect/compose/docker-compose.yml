@@ -23,6 +23,8 @@ services:
 
     networks:
       - waddler-network
+    depends_on:
+      - config-service
 
 
   gateway-service:
@@ -39,6 +41,9 @@ services:
       CLIENT_SECRET: 9xXfqVsbcMvxdIlhx3oKO43b6pyeUoMN
     networks:
       - waddler-network
+    depends_on:
+      - config-service
+      - eureka-service
 
   multi-rubro-project:
     container_name: multi-rubro-project
@@ -53,6 +58,13 @@ services:
     networks:
       - waddler-network
       - database-multirubro
+    depends_on:
+      - config-service
+      - eureka-service
+      - gateway-service
+      - keycloak
+      - mysql-database-multirubro
+      - rabbitmq
 
   multi-rubro-project-products:
     container_name: multi-rubro-project-products
@@ -67,6 +79,13 @@ services:
     networks:
       - waddler-network
       - database-multirubroproducts
+    depends_on:
+      - config-service
+      - eureka-service
+      - gateway-service
+      - keycloak
+      - mysql-database-multirubroproducts
+      - rabbitmq
 
   mysql-database:
     image: mysql:latest
