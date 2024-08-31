@@ -159,6 +159,10 @@ public class BillServiceImp implements BillService {
             sellingEntity.setProductId(sell.getProductNumber());
             sellingEntity = sellingService.createSelling(sellingEntity);
 
+            int n = 0;
+            String nToString = Integer.toString(n);
+            String[] nsdf = nToString.split("");
+
             // Create and populate the selling response
             SellingResponse sellingResponse = new SellingResponse();
             sellingResponse.setProductNumber(sellingEntity.getProductId());

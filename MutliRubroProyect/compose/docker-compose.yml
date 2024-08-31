@@ -8,7 +8,6 @@ services:
     ports:
       - "8000:8000"
     environment:
-      SPRING_PROFILES_ACTIVE: docker
       EUREKA_HOST: eureka-service
 
     networks:

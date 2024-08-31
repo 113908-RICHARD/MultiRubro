@@ -10,63 +10,6 @@ eureka:
   instance:
     hostname: ${EUREKA_HOST}
 
-spring:
-  cloud:
-    gateway:
-      default-filters:
-        - TokenRelay
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: multi-rubro-project-bills
-          uri: lb://multi-rubro-project
-          predicates:
-            - Path=/bills/**
-        - id: multi-rubro-project-clients
-          uri: lb://multi-rubro-project
-          predicates:
-            - Path=/clients/**
-        - id: multi-rubro-project-sellings
-          uri: lb://multi-rubro-project
-          predicates:
-            - Path=/sellings/**
-        - id: multi-rubro-project-users
-          uri: lb://multi-rubro-project
-          predicates:
-            - Path=/users/**
-        - id: multi-rubro-project-products-categories
-          uri: lb://multi-rubro-project-products
-          predicates:
-            - Path=/categories/**
-        - id: multi-rubro-project-products-providers
-          uri: lb://multi-rubro-project-products
-          predicates:
-            - Path=/providers/**
-        - id: multi-rubro-project-products-products
-          uri: lb://multi-rubro-project-products
-          predicates:
-            - Path=/products/**
-
-  security:
-    oauth2:
-      client:
-        registration:
-          keycloak: # Use a consistent name here
-            provider: keycloak # Match the provider name here
-            client-id: springboot-client
-            client-secret: 69NkjD3gGtBFt204h70QnYO3ODf0X31S
-            authorization-grant-type: authorization_code
-            redirect-uri: "http://keycloak/login/oauth2/code/springboot-client" # Use consistent naming
-            scope: openid
-        provider:
-          keycloak: # Ensure this matches the registration provider
-            issuer-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT
-            authorization-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/auth
-            token-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/token
-            user-info-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/userinfo
-            jwk-set-uri: http://${KEYCLOAK_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/certs
-
 logging:
   level:
     org:

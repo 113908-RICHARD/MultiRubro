@@ -4,5 +4,5 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://${CONFIG_SERVICE_HOST:localhost}:8000
+      uri: http://localhost:8000
 
