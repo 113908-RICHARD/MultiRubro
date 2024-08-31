@@ -16,7 +16,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://${KEYCLOAK_INTERNAL_HOST:localhost}:8080:8080/realms/SPRINGBOOT
+          issuer-uri: http://${KEYCLOAK_INTERNAL_HOST:localhost}:8080/realms/SPRINGBOOT
 
 keycloak:
   clientId: springboot-client
