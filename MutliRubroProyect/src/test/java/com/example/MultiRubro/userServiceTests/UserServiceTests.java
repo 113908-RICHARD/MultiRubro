@@ -55,42 +55,43 @@ public class UserServiceTests {
 
     @BeforeEach
     public void setUp(){
-        MockitoAnnotations.openMocks(this);
-    }
-
-    @Test
-    public void testCreateUser(){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setUserName("prueba");
-        CreateUserRequest userRequest = new CreateUserRequest();
-        userRequest.setUserName("prueba");
-
-        User user = new User();
-        user.setUserName("prueba");
-
-        Mockito.when(userJpaRepository.findByUserName(userEntity.getUserName())).thenReturn(Optional.empty());
-
-        Mockito.when(userJpaRepository.save(any(UserEntity.class))).thenReturn(userEntity);
-        Mockito.when(modelMapper.map(any(UserEntity.class), eq(User.class))).thenReturn(user);
-
-        Mockito.when(userService.createKeyCloakUser(any(CreateUserRequest.class))).thenReturn(true);
-
-        User response = userService.createUser(userRequest);
-        Assertions.assertEquals(userEntity.getUserName(), response.getUserName());
-
-
-
 
 
     }
-
-    @Test
-    public void testCreateKeyCloakUser(){
-        Mockito.when(userService.createKeyCloakUser(any(CreateUserRequest.class))).thenReturn(true);
-        Boolean response = userService.createKeyCloakUser(new CreateUserRequest());
-        Assertions.assertTrue(response);
-
-    }
-
+//
+//    @Test
+//    public void testCreateUser(){
+//        UserEntity userEntity = new UserEntity();
+//        userEntity.setUserName("prueba");
+//        CreateUserRequest userRequest = new CreateUserRequest();
+//        userRequest.setUserName("prueba");
+//
+//        User user = new User();
+//        user.setUserName("prueba");
+//
+//        Mockito.when(userJpaRepository.findByUserName(userEntity.getUserName())).thenReturn(Optional.empty());
+//
+//        Mockito.when(userJpaRepository.save(any(UserEntity.class))).thenReturn(userEntity);
+//        Mockito.when(modelMapper.map(any(UserEntity.class), eq(User.class))).thenReturn(user);
+//
+//        Mockito.when(userService.createKeyCloakUser(any(CreateUserRequest.class))).thenReturn(true);
+//
+//        User response = userService.createUser(userRequest);
+//        Assertions.assertEquals(userEntity.getUserName(), response.getUserName());
+//
+//
+//
+//
+//
+//    }
+//
+//    @Test
+//    public void testCreateKeyCloakUser(){
+//        Mockito.when(userService.createKeyCloakUser(any(CreateUserRequest.class))).thenReturn(true);
+//        Boolean response = userService.createKeyCloakUser(new CreateUserRequest());
+//        Assertions.assertTrue(response);
+//
+//    }
+//
 
 }

@@ -18,8 +18,6 @@ services:
     image: genarorichard/eureka-service:last
     environment:
       CONFIG_SERVICE_HOST: config-service
-
-
     ports:
       - "8761:8761"
 
@@ -37,12 +35,23 @@ services:
       KEYCLOAK_HOST: keycloak
       EUREKA_HOST: eureka-service
       KEYCLOAK_INTERNAL_HOST: keycloak
-      KEYCLOAK_EXTERNAL_URL: localhost:8080
+
       CLIENT_SECRET: 9xXfqVsbcMvxdIlhx3oKO43b6pyeUoMN
     networks:
       - waddler-network
 
-
+  multi-rubro-project:
+    container_name: multi-rubro-project
+    image: genarorichard/multirubro:last
+    environment:
+      CONFIG_SERVICE_HOST: config-service
+      KEYCLOAK_HOST: keycloak
+      EUREKA_HOST: eureka-service
+      KEYCLOAK_INTERNAL_HOST: keycloak
+      RABBITMQ_HOST: rabbitmq
+      CLIENT_SECRET: 9xXfqVsbcMvxdIlhx3oKO43b6pyeUoMN
+    networks:
+      - waddler-network
 
   mysql-database:
     image: mysql:latest
@@ -124,6 +133,8 @@ services:
       - rabbitmq_logs:/var/log/rabbitmq
     networks:
       - waddler-network
+
+
 
 volumes:
   rabbitmq_data:
