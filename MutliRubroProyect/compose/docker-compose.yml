@@ -1,5 +1,5 @@
 version: '3.8'
-#UPDATED 2/8
+#UPDATED 31/8
 services:
 
   config-service:
@@ -9,7 +9,6 @@ services:
       - "8000:8000"
     environment:
       EUREKA_HOST: eureka-service
-
     networks:
       - waddler-network
 
@@ -37,7 +36,6 @@ services:
       KEYCLOAK_HOST: keycloak
       EUREKA_HOST: eureka-service
       KEYCLOAK_INTERNAL_HOST: keycloak
-
       CLIENT_SECRET: 9xXfqVsbcMvxdIlhx3oKO43b6pyeUoMN
     networks:
       - waddler-network
@@ -87,8 +85,8 @@ services:
       - mysql-database-multirubro
       - rabbitmq
 
-  multi-rubro-project-products:
-    container_name: multi-rubro-project-products
+  multi-rubro-project-products-1:
+    container_name: multi-rubro-project-products-1
     image: genarorichard/multirubroproducts:last
     environment:
       CONFIG_SERVICE_URL: config-service
@@ -130,8 +128,8 @@ services:
       - rabbitmq
 
   mysql-database:
-    image: mysql:latest
-    container_name: mysql-database
+    image: genarorichard/keycloak-database:last
+    container_name: mysql-database-keycloak
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: keycloak
@@ -140,9 +138,11 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /var/lib/mysql_data_keycloak:/var/lib/mysql_keycloak
+      - mysql_keycloak:/var/lib/mysql_keycloak
     networks:
       - waddler-network
+
+
 
   mysql-database-multirubro:
     image: mysql:latest
@@ -179,7 +179,7 @@ services:
     container_name: keycloak
     environment:
       KC_DB: mysql
-      KC_DB_URL: jdbc:mysql://mysql-database:3306/keycloak    # Use the service name of MySQL container here
+      KC_DB_URL: jdbc:mysql://mysql-database:3306/keycloak
       KC_DB_USERNAME: waddler
       KC_DB_PASSWORD: root
       KEYCLOAK_USER: admin
@@ -215,6 +215,8 @@ services:
 volumes:
   rabbitmq_data:
   rabbitmq_logs:
+  mysql_keycloak:
+    name: mysql_keycloak
 
 
 networks:

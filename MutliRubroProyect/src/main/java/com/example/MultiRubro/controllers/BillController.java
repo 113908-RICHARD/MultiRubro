@@ -29,17 +29,17 @@ public class BillController {
         return ResponseEntity.ok(billService.createBill(request));
     }
 
-    @GetMapping("/id/{id}")  // Change the mapping path to "/bills/id/{id}"
+    @GetMapping("/id/{id}")
     public ResponseEntity<BillResponse> getBillById(@PathVariable Long id) {
         return ResponseEntity.ok(billService.getBillById(id));
     }
 
-    @GetMapping("/client/{userName}")  // Change the mapping path to "/bills/client/{userName}"
+    @GetMapping("/client/{userName}")
     public ResponseEntity<List<BillResponse>> getBillsByClient(@PathVariable String userName) {
         return ResponseEntity.ok(billService.getBillsByClient(userName));
     }
 
-    @GetMapping("")  // Add a new mapping for "/bills" to get all bills
+    @GetMapping("")
     public ResponseEntity<List<BillResponse>> getAllBills() {
         return ResponseEntity.ok(billService.getAllBills());
     }
@@ -53,6 +53,6 @@ public class BillController {
             System.out.println(errorMessage);
         }
 
-        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Service is currently unavailable. Please try again later.");
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("CircuitBreaker: Error creating bill");
     }
 }
