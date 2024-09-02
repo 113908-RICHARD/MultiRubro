@@ -9,7 +9,7 @@ To deploy this app, follow these steps:
 First, open your terminal at the root of the project and run the following command:
 
 ```powershell
-Start-Process cmd.exe -ArgumentList "/c \"PATH_TO_ROOT_PROJECT\"/KeycloakHost.bat" -Verb RunAs # Change PATH_TO_ROOT_PROJECT for your root directory of the proyect. In my case is  C:\Users\genar\Documents\GitHub\MultiRubro\MutliRubroProyect
+Start-Process cmd.exe -ArgumentList "/c \"PATH_TO_ROOT_PROJECT\"/KeycloakHost.bat" -Verb RunAs # Change PATH_TO_ROOT_PROJECT for your root directory of the proyect. In my case is  C:\Users\genar\Documents\GitHub\MultiRubro
 ```
 ### 2. Go to compose folder
 
