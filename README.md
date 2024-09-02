@@ -13,11 +13,11 @@ Start-Process cmd.exe -ArgumentList "/c PATH_TO_ROOT_PROJECT/KeycloakHost.bat" -
 # Change PATH_TO_ROOT_PROJECT for your root directory of the proyect. In my case is  C:/Users/genar/Documents/GitHub/MultiRubro
 ```
 
-
+From inside the root project directory:
 ### 2. Start databases
 
 ```powershell
-docker-compose up -d mysql-database-keycloak
+docker-compose up -d mysql-database
 docker-compose up -d mysql-database-multirubro
 docker-compose up -d mysql-database-multirubroproducts
 ```
@@ -32,14 +32,17 @@ docker-compose up -d keycloak # Wait 1 minute for its start before starting the 
 
 ```powershell
 docker-compose up -d config-service # Wait 15 seconds
-sleep 15
+
 docker-compose up -d eureka-service # Wait 15 seconds
-sleep 15
+
 docker-compose up -d gateway-service # Wait 20 seconds
-sleep 15
+
 docker-compose up -d multi-rubro-project-1 
+
 docker-compose up -d multi-rubro-project-2 
+
 docker-compose up -d multi-rubro-project-products-1 
+
 docker-compose up -d multi-rubro-project-products-2 
 ```
 
