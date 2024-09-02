@@ -9,29 +9,26 @@ To deploy this app, follow these steps:
 First, open your terminal at the root of the project and run the following command:
 
 ```powershell
-Start-Process cmd.exe -ArgumentList "/c \"PATH_TO_ROOT_PROJECT\"/KeycloakHost.bat" -Verb RunAs # Change PATH_TO_ROOT_PROJECT for your root directory of the proyect. In my case is  C:\Users\genar\Documents\GitHub\MultiRubro
-```
-### 2. Go to compose folder
-
-```powershell
-cd compose
+Start-Process cmd.exe -ArgumentList "/c PATH_TO_ROOT_PROJECT/KeycloakHost.bat" -Verb RunAs     
+# Change PATH_TO_ROOT_PROJECT for your root directory of the proyect. In my case is  C:/Users/genar/Documents/GitHub/MultiRubro
 ```
 
-### 3. Start databases
+
+### 2. Start databases
 
 ```powershell
 docker-compose up -d mysql-database-keycloak
 docker-compose up -d mysql-database-multirubro
 docker-compose up -d mysql-database-multirubroproducts
 ```
-### 4. Start services that will consume the app
+### 3. Start services that will consume the app
 
 ```powershell
 docker-compose up -d rabbitmq # To start RabbitMQ
 docker-compose up -d keycloak # Wait 1 minute for its start before starting the other containers
 ```
 
-### 5. Start microservices
+### 4. Start microservices
 
 ```powershell
 docker-compose up -d config-service # Wait 15 seconds
