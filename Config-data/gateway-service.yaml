@@ -61,11 +61,11 @@ spring:
             scope: openid
         provider:
           keycloak: # Ensure this matches the registration provider
-            issuer-uri: http://${KEYCLOAK_INTERNAL_HOST}:8080/realms/SPRINGBOOT
-            authorization-uri: http://${KEYCLOAK_INTERNAL_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/auth
-            token-uri: http://${KEYCLOAK_INTERNAL_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/token
-            user-info-uri: http://${KEYCLOAK_INTERNAL_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/userinfo
-            jwk-set-uri: http://${KEYCLOAK_INTERNAL_HOST}:8080/realms/SPRINGBOOT/protocol/openid-connect/certs
+            issuer-uri: http://${KEYCLOAK_INTERNAL_HOST:localhost}:8080/realms/SPRINGBOOT
+            authorization-uri: http://${KEYCLOAK_INTERNAL_HOST:localhost}:8080/realms/SPRINGBOOT/protocol/openid-connect/auth
+            token-uri: http://${KEYCLOAK_INTERNAL_HOST:localhost}:8080/realms/SPRINGBOOT/protocol/openid-connect/token
+            user-info-uri: http://${KEYCLOAK_INTERNAL_HOST:localhost}:8080/realms/SPRINGBOOT/protocol/openid-connect/userinfo
+            jwk-set-uri: http://${KEYCLOAK_INTERNAL_HOST:localhost}:8080/realms/SPRINGBOOT/protocol/openid-connect/certs
 
 
 

@@ -4,11 +4,11 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://${CONFIG_SERVICE_URL}:8000
+      uri: http://${CONFIG_SERVICE_URL:localhost}:8000
 
 
   rabbitmq:
-    host: ${RABBITMQ_HOST}
+    host: ${RABBITMQ_HOST:localhost}
     port: 5672
     username: user
     password: password
